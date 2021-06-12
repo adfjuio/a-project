@@ -26,7 +26,7 @@ function click1(){
   }
 
 
-function menu(){document.getElementById("click1").style.top = "0";
+function menu(){document.getElementById("click1").style.top = "0px";}
 	
 	
 	
