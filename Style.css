@@ -162,3 +162,13 @@
 
 }
 
+h2{
+   font-family:monospace;
+   font-size:20px;
+   color:grey;
+   background-color:lightgray;
+   }
+h3{
+   font-size:20px;
+   color:black;
+   }
