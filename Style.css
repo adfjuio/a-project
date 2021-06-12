@@ -2,7 +2,11 @@
 
     animation: cssAnimation 5s forwards;
 
-    
+    animation-iteration-count: infinite;
+
+
+
+-webkit-animation-iteration-count: infinite;
 
 }
 
