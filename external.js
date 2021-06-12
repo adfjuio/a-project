@@ -24,3 +24,9 @@ function click1(){
     x.style.display="none";
     y.style.backgroundColor="#303030";}
   }
+
+
+function menu(){document.getElementById("click1").style.top = "0";
+	
+	
+	
