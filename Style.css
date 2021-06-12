@@ -162,11 +162,11 @@
 
 }
 
-h2{width:100px;
+p1{padding:20px;
    font-family:courier;
    font-size:20px;
-   color:grey;
-   background-color:lightgray;
+   color:black;
+   border:2px solid red;
    }
 h3{
    font-size:20px;
