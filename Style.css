@@ -1,6 +1,6 @@
-   #anim1{ -webkit-animation: cssAnimation 1s forwards; 
+   #anim1{ -webkit-animation: cssAnimation 10s forwards; 
 
-    animation: cssAnimation 2s forwards;
+    animation: cssAnimation 10s forwards;
 
     
 
@@ -10,39 +10,151 @@
 
     0%   {color:dodgerblue;
 
-            transform:translateY(-60%);
+            
 
             
 
              }
 
-     
+    
+
+   10%   {color:blue;
+
+            
+
+            
+
+             }
+
+     20%   {color:#00FFFF;
+
+            
+
+            
+
+             }
+
+     30%   {color:#00FF00;
+
+           
+
+            
+
+             }
+
+     40%   {color:yellow;
+
+            
+
+            
+
+             }
+
+    50%{
+
+       color:orange;}
+
+   
+
+   60%{
+
+      color:tomato;}
+
+   70%{color:red;}
+
+   80%{color:purple;}
+
+   
+
+   
 
     90%  {color:springgreen;
 
-              transform:translateY(0%);
+              
 
               }
 
     100% {color:green;
-            transform:translateY(30%); }
-
-}
-
-@-webkit-keyframes cssAnimation {
-
-    0%   {color:dodgerblue;
-
-            transform:translateY(-60%);
 
             }
 
+}
+
+
+@-webkit-keyframes cssAnimation {
+
+    
+    0%   {color:dodgerblue;
+
+            
+
+            
+
+             }
+
+    
+
+   10%   {color:blue;
+
+            
+
+            
+
+             }
+
+     20%   {color:#00FFFF;
+
+            
+
+            
+
+             }
+
+     30%   {color:#00FF00;
+
+           
+
+            
+
+             }
+
+     40%   {color:yellow;
+
+            
+
+            
+
+             }
+
+    50%{
+
+       color:orange;}
+
+   
+
+   60%{
+
+      color:tomato;}
+
+   70%{color:red;}
+
+   80%{color:purple;}
+
+   
+
+   
+
     90%  {color:springgreen;
-        transform:translateY(0%);
-           }
+
+              
+
+              }
 
     100% {color:green;
-          transform:translateY(30%);}
+
+            }
+
+
 
 }
 
