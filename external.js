@@ -5,7 +5,7 @@ function click1(){
   var x= document.getElementById("txt1")
   if(x.style.display=="none"){
     x.style.display="block";
-    y.style.backgroundColor="springgreen";}
+    y.style.backgroundColor="orange";}
   else{
     x.style.display="none";
     y.style.backgroundColor="#303030";}
