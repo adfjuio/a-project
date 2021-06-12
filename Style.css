@@ -1,0 +1,46 @@
+   #anim1{ -webkit-animation: cssAnimation 1s forwards; 
+
+    animation: cssAnimation 1s forwards;
+
+    
+
+}
+
+@keyframes cssAnimation {
+
+    0%   {opacity: 1;
+
+            transform:translateY(-60%);
+
+            
+
+             }
+
+     
+
+    90%  {opacity: 1;
+
+              
+
+              }
+
+    100% {opacity: 0;}
+
+}
+
+@-webkit-keyframes cssAnimation {
+
+    0%   {opacity: 1;
+
+            transform:translateY(-60%);
+
+            }
+
+    90%  {opacity: 1;
+
+           }
+
+    100% {opacity: 0;}
+
+}
+
