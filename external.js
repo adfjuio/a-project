@@ -26,12 +26,19 @@ function click1(){
   }
 
 
-function menu(){
+function menu(){var y=document.getElementById("menu")
+	
 	 var x=document.getElementById("click1")
-if(x.style.top =="0px"){
+if(x.style.top =="0px"){y.style.innerText="Menu";
+	y.style.backgroundColor="#303030";
+			
 	
 	       x.style.top="-50px";
-	       }else{
+			
+	       }else
+
+{y.style.innerText="back";
+	y.style.backgroundColor="red";
 		       x.style.top="0px";}}
 	
 	
