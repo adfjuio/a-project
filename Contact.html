@@ -1,0 +1,59 @@
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<title>contact us</title>
+
+<body onload="init()">
+
+  <h1>Contact </h1>
+
+ <form   enctype="text/plain" accept-charset="utf-8">
+
+    
+
+     <input id="nameText" type="text" name="Name"  value size="60" placeholder="name" required>  <!-- required 必填欄位 ，placeholder 預設內容--> 
+
+     
+
+     
+
+     <input id="emailText" type="email" name="Email"  value size="60" placeholder="Email" required>
+
+     
+
+     
+
+     <input id="telText"type="tel" name="Phone"  value size="60" aria-invalid="false" placeholder="phone" required>
+
+     
+
+     
+
+     <input  id="subText" type="text" name="Subject"  value size="60" aria-invalid="false" placeholder="subject" required>
+
+             
+
+     
+
+     <textarea id="bodyText" name="your-message" cols="40" rows="10"  aria-required="true" aria-invalid="false" placeholder="Your Message" required></textarea>
+
+     
+
+     
+
+     <div>
+
+         <input type="button" id="submit" value="Submit" onclick="submitHandler();">
+
+         <a id="mailTo"></a>
+
+     </div>
+
+ </form>
+
+</body>
+
+<html>
