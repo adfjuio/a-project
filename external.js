@@ -26,7 +26,13 @@ function click1(){
   }
 
 
-function menu(){document.getElementById("click1").style.top = "0px";}
+function menu(){
+	 var x=document.getElementById("click1")
+if(x.style.top =="0px";){
+	
+	       x.style.top="-50px";
+	       }else{
+		       x.style.top="0px";}}
 	
 	
 	
