@@ -28,7 +28,7 @@ function click1(){
 
 function menu(){
 	 var x=document.getElementById("click1")
-if(x.style.top =="0px";){
+if(x.style.top =="0px"){
 	
 	       x.style.top="-50px";
 	       }else{
