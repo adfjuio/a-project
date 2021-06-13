@@ -55,5 +55,125 @@
  </form>
 
 </body>
+  
+  <style>
+
+	@import url('https://fonts.googleapis.com/css?family=Lalezar&display=swap');
+
+body{
+
+  background-image:linear-gradient(150deg,springgreen,dodgerblue);
+
+  font-family: 'Lalezar';
+
+}
+
+h1{
+
+  text-align:center;
+
+  color:#000;
+
+  font-size:40px;
+
+  margin:0px;
+
+}
+
+form{
+
+  display:flex;
+
+  align-items: center;
+
+  flex-direction: column;
+
+}
+
+input{
+
+  height:34px;
+
+}
+
+input,textarea{
+
+  border-radius:3px;
+
+  border:2px solid #000 ;
+
+  margin:5px;
+
+  width:100%;
+
+  max-width:400px;
+
+  font-family: 'Lalezar';
+
+}
+
+input#submit{
+
+  background:#000;
+
+  color:#fff;
+
+  font-size:2em;
+
+  height:auto;
+
+}
+
+	</style>
+
+	
+
+	<script>
+
+		
+
+    var initSubject='',initBody='';
+
+ 
+
+   
+
+    function submitHandler(){
+
+        var to = "lovejot044@gmail.com";
+
+        var name = nameText.value;
+
+        var email = emailText.value;
+
+        var tel = telText.value;
+
+        var subject = subText.value;
+
+        var body = ""+bodyText.value+'%0A%0A%0A';
+
+            body += "From:"+nameText.value+'%0A';
+
+            body += "Email:"+emailText.value+'%0A';
+
+            body += "Tel:"+telText.value;
+
+        mailTo.href="mailto:"+to+"?subject="+subject+"&body="+body;
+
+        mailTo.click();
+
+    }
+
+    function init(){
+
+        subText.value=initSubject;
+
+        
+
+        bodyText.value=initBody;
+
+    }
+
+		</script>
 
 <html>
