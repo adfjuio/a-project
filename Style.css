@@ -1,5 +1,5 @@
 #menu:active{
-    background-color:grey;}
+    background-image:linear-gradient(lightgrey,grey);}
    
 
 #anim1{ -webkit-animation: cssAnimation 5s forwards; 
