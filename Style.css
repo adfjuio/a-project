@@ -1,4 +1,4 @@
-#menu{position:fixed; top:0px; left:0px; height:40px; background-image:linear-gradient(red,orange); z-index:1; color:white; width:60px;"}
+#menu{position:fixed; top:0px; left:0px; height:40px; background-image:linear-gradient(red,orange); z-index:1; color:white; width:60px;}
 
 #menu:hover{
     background-image:linear-gradient(lightgrey,grey);}
