@@ -1,4 +1,6 @@
-
+#menu:active{
+    background-color:grey;}
+   
 
 #anim1{ -webkit-animation: cssAnimation 5s forwards; 
 
