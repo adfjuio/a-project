@@ -22,7 +22,7 @@ if(x.style.top =="0px"){a.innerText="Menu";
 			
 	       }else
 
-{a.innerText="Hide";
+{a.innerText="Back";
 	z.style.top="0px";
 	
 	y.style.backgroundColor="red";
