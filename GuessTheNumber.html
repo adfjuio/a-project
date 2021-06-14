@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-
-<html><meta name="viewport" content="width=device-width, initial-scale=1">
+<html><meta name="viewport" content="width=358; user-scalable=0;" />
 
   <head>
 
-    <meta charset="utf-8">
+    
 
     <title>Number guessing game</title>
 
@@ -17,6 +15,8 @@
       }
 
       body {
+
+      	background-image:url("https://i.gifer.com/IrF.gif");      	text-align:center;
 
         width: 50%;
 
@@ -36,31 +36,67 @@
 
       }
 
+     #guessField{
+
+     	height:30px;
+
+        width:85%;
+
+      	border:2px solid black;}
+
+      .guessSubmit{
+
+      	background-color:dodgerblue;
+
+      padding:10px 20px;
+
+      font-size:18px;
+
+      
+
+      border:none;
+
+      color:white;
+
+      position:absolute;
+
+      right:-84px;
+
+      
+
+      	}
+
+      .guessSubmit:active {
+
+      	border:2px solid red;
+
+      	background-color:black;}
+
     </style>
 
   </head>
 
-  <body>
+  <body></br></br>
 
-    <h1>Number guessing game</h1>
+    <h1 style="background-color:white;" >Number guessing game</h1>
 
-    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+    <p style="color:white";>We have selected a random number between </br>1 and 100. See if you can guess it in 10 turns or </br>fewer. We'll tell you if your guess was too high </br>or too low.</p>
 
     <div class="form">
 
-      <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+      <label for="guessField"><span style="position:absolute; left:33px; font-size:30px; color:Springgreen;">Enter a guess:</span></br> </br></br></label><input type="text" id="guessField" class="guessField">
 
-      <input type="submit" value="Submit guess" class="guessSubmit">
+     </br></br> <input type="submit" value="Submit guess" class="guessSubmit">
 
-    </div>
+    </div></br></br></br>
 
     <div class="resultParas">
 
-      <p class="guesses"></p>
+      <p style="font-size:20px;" class="guesses"></p>
 
-      <p class="lastResult"></p>
+      <p style="font-size:20px;" class="lastResult"></p>
 
-      <p class="lowOrHi"></p>
+      <p style="font-size:20px;" class="lowOrHi"></p>
 
     </div>
 
@@ -191,3 +227,7 @@ function resetGame(){
   </body>
 
 </html>
+
+
+        
+
