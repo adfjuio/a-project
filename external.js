@@ -4,7 +4,7 @@ function contact(){document.getElementById("contact").style.backgroundColor="dod
 	  
 
 function menu(){var z=document.getElementById("contact")
-	 y=document.getElementById("menu")
+	 y=document.getElementById("menu1")
 	
 	 var x=document.getElementById("click1")
 if(x.style.top =="0px"){z.style.top="-50px";
