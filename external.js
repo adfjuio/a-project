@@ -12,8 +12,9 @@ var y=document.getElementById("menu")
 
 	
 	 var x=document.getElementById("click1")
-if(x.style.top =="0px"){z.style.top="-50px";
-	.style.innerText="Menu";
+if(x.style.top =="0px"){a.style.innerText="Menu";
+	z.style.top="-50px";
+	
 	y.style.backgroundColor="#303030";
 			
 	
