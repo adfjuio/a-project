@@ -1,5 +1,5 @@
-
-function contact(){document.getElementById("contact").style.backgroundColor="yellow";}
+function click1(){document.getElementById("click1").style.backgroundColor="dodgerblue";}
+function contact(){document.getElementById("contact").style.backgroundColor="dodgerblue";}
 	
 	  
 
