@@ -1,5 +1,6 @@
 
-
+function contact(){document.getElementById("contact").style.backgroundColor="yellow";}
+	
 	  
 
 function menu(){var z=document.getElementById("contact")
