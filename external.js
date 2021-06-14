@@ -12,7 +12,7 @@ var y=document.getElementById("menu")
 
 	
 	 var x=document.getElementById("click1")
-if(x.style.top =="0px"){a.style.innerText="Menu";
+if(x.style.top =="0px"){a.innerText="Menu";
 	z.style.top="-50px";
 	
 	y.style.backgroundColor="#303030";
@@ -22,7 +22,7 @@ if(x.style.top =="0px"){a.style.innerText="Menu";
 			
 	       }else
 
-{a.style.innerText="back";
+{a.innerText="Hide";
 	z.style.top="0px";
 	
 	y.style.backgroundColor="red";
