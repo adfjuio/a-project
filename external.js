@@ -5,7 +5,7 @@ function contact(){document.getElementById("contact").style.backgroundColor="dod
 
 function menu(){var z=document.getElementById("contact")
 	
-var a =document.getElementById("menu2")
+var a =document.getElementById("menu1")
 var y=document.getElementById("menu")
 		
 
