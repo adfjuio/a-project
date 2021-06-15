@@ -1,14 +1,127 @@
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+html {
+
+  box-sizing: border-box;
+
+}
+
+*, *:before, *:after {
+
+  box-sizing: inherit;
+
+}
+
+.column {
+
+  float: left;
+
+  width: 33.3%;
+
+  margin-bottom: 16px;
+
+  padding: 0 8px;
+
+}
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  margin: 8px;
+
+}
+
+.container {
+
+  padding: 0 16px;
+
+  height:370px;
+
+  
+
+}
+
+.container::after, .row::after {
+
+  content: "";
+
+  clear: both;
+
+  display: table;
+
+}
+
+.title {
+
+  color: grey;
+
+}
+
+.button {
+
+  border: none;
+
+  outline: 0;
+
+  display: inline-block;
+
+  padding: 8px;
+
+  color: white;
+
+  background-color: black;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  width: 100%;
+
+}
+
+.button:hover {
+
+  background-color: #555;
+
+}
+
+@media screen and (max-width: 650px) {
+
+  .column {
+
+    width: 100%;
+
+    display: block;
+
+    
+
+  }
+
+}
+
+</style>
+
   <head>
+
     <title>
+
       My Site
+
     </title>
+
   </head>
 
   <body>
 
    
+
     <div style="position:fixed; top:0px; left:0px; right:0px; background-color:#303030; height:50px; "> 
 
    <a href="About.html"> <div id="click1" onclick="click1()" style="position:fixed; right:0px; top:-50px; transition: top 0.3s; border-left:2px solid white; border-right:none; color:white; border-top:none; border-bottom:none; background-color:#303030; height:50px; width:60px; ">
@@ -18,14 +131,55 @@
     </div>
 
 <div onclick="menu()" style="position:fixed; top:0px; left:0px; height:50px; background-color:#303030;  z-index:1; color:white; width:60px; "  id="menu" ><span style="position:absolute; top:13px; left:6px ;" id="menu1">Menu</span></div>
+
 <a href="Contact.html"><div id="contact" onclick="contact()" style="position:fixed; top:-50px; right:62px; transition: top 0.5s;background-color:#303030; border-left:2px solid white; border-top:none; border-bottom:none; border-right:none; color:white; height:50px; width:65px; ">
+
  <span style="position:absolute; top:13px; left:4px; ">Contact</span></div></a>
-</br></br></br></br><a href="GuessTheNumber.html"><button>game</button></a>
+
+</br></br></br></br></br>
+
+<div class="row">
+
+  <div class="column">
+
+    <div class="card">
+
+      
+
+      <div class="container">
+
+        <h2 style="color:purple;">Guess the number</h2>
+
+        <p class="title">Type:fun</p>
+
+        <p style="color:orange";>Fun game, best for time pass .You have to guess the number right and hints will be provided.</p>
+
+        <p style="color:blue;">Game display:</p>
+
+        <marquee style="width:260px; height:118px; background-color:springgreen; position:absolute; top:310px; left:50px;  border:none; " behavior="scroll" direction="left" scrolldelay="800" scrollamount="100">
+
+<img src="https://www.linkpicture.com/q/IMG-20210614-WA0006.jpg" width="260" height="118">
+
+<img src="https://www.linkpicture.com/q/IMG-20210614-WA0007_2.jpg" width="260" height="118">
+
+<img src="https://www.linkpicture.com/q/IMG-20210614-WA0008.jpg" width="260" height="118">
+
+</marquee></br></br></br> </br></br></br>
+
+        <p><button class="button">Play now</button></p>
+
+      </div>
+
+    </div>
+
+  </div>
+
     <script src="external.js">
 
 </script>
-<link rel="stylesheet" href="Style.css">
-  </body>
 
+<link rel="stylesheet" href="Style.css">
+
+  </body>
 
 </html>
