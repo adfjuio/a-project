@@ -1,37 +1,79 @@
-.grid {
-    width: 400px;
-    height: 600px;
-    background-image: url('background.png');
-    position: relative;
-    font-size: 200px;
-    text-align: center;
-  }
+#moveStraightButton{
+
+  	position:absolute;      left:155px;}
+
+     
+
+  	#moveRightButton{
+
+  	position:absolute;
+
+      right:5px;}
+
+      
+
+  	html{
+
+  	background-color:dodgerblue;}
+
   
-  .doodler {
-    width: 87px;
-    height: 85px;
-    background-image: url('doodler-guy.png');
-    position: absolute;
-  }
-  
-  .platform {
-    width: 85px;
-    height: 15px;
-    background-image: url('platform.png');
-    position: absolute;
-  }
 
-  #moveLeftButton {
-    width: 75px;
-    height: 50px;
-  }
+  	button{
 
-  #moveRightButton {
-    width: 75px;
-    height: 50px;
-  }
+  	background-color:black;
 
-  #moveStraightButton {
-    width: 75px;
-    height: 50px;
-  }
+      color:white; 
+
+      border:none;
+
+      font-size:25px;}
+
+      
+
+      button:active{
+
+      	background-color:red;}
+
+      
+
+  	.grid {
+
+  width: 400px;
+
+  height: 600px;
+
+  background-image:url("https://i.gifer.com/nyh.gif");
+
+  background-position:center;
+
+position: relative;
+
+  font-size: 200px;
+
+  text-align: center;
+
+}
+
+.doodler {
+
+  width: 87px;
+
+  height: 85px;
+
+  background-image: url('https://www.linkpicture.com/q/doodler-guy.png');
+
+  position: absolute;
+
+}
+
+.platform {
+
+  width: 85px;
+
+  height: 15px;
+
+  background-image: url('https://www.linkpicture.com/q/platform.png');
+
+  position: absolute;
+
+}
