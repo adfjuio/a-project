@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+	<html lang="en" dir="ltr"><meta name="viewport" content="width=415; user-scalable=0;" />
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <script src="index.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="style.css"></link>
+
+    <title>Doodle Jump</title>
+
+  </head>
+
+  <body>
+
+  	</br>
+
+   <div style="background-color:#303030; position:absolute; top:0px; left:0px; right:0px; height:30px; z-index:1; ">
+
+   <h style=" color:white; position:absolute; top:5px;">Doodle Jump Game</h>
+
+   <h style="color:lightgrey; position:absolute; top:4px; right:8px; font-size:10px;">Positioning, design : Love brar</br> Script, functioning :Jaspreet</div>
+
+    <div id="game" class="grid">
+
+    
+
+    </div>
+
+</br>
+
+    <button id="moveLeftButton"><<<</button>
+
+    <button id="moveStraightButton">Balance</button>
+
+    <button id="moveRightButton">>>></button>
+
+   </br></br>
+
+  <div class="container">
+
+ 
+
+<button style="background-color: white; color:black; position:absolute; left:159px; " type="button" id="reloadpage" class="btn btn-success btn-lg" onclick="refreshPage()">Restart</button>
+
+ 
+
+</div>
+
+  </body>
+
+  <style>
+
+  	
+
+  	#moveStraightButton{
+
+  	position:absolute;
+
+      left:157px;}
+
+     
+
+  	#moveRightButton{
+
+  	position:absolute;
+
+      right:5px;}
+
+      
+
+  	html{
+
+  	background-color:dodgerblue;}
+
+  
+
+  	button{
+
+  	background-color:black;
+
+      color:white; 
+
+      border:none;
+
+      font-size:25px;}
+
+      
+
+      button:active{
+
+      	background-color:red;}
+
+      
+
+  	.grid {
+
+  width: 400px;
+
+  height: 600px;
+
+  background-image:url("https://i.gifer.com/nyh.gif");
+
+  background-position:center;
+
+position: relative;
+
+  font-size: 200px;
+
+  text-align: center;
+
+}
+
+.doodler {
+
+  width: 87px;
+
+  height: 85px;
+
+  background-image: url('https://www.linkpicture.com/q/doodler-guy.png');
+
+  position: absolute;
+
+}
+
+.platform {
+
+  width: 85px;
+
+  height: 15px;
+
+  background-image: url('https://www.linkpicture.com/q/platform.png');
+
+  position: absolute;
+
+}
+
+  	</style>
+
+  <script>
+
+  	function nw(){ 
+
+  	document.getElementById("game").reset;
+
+      
+
+             }
+
+  </script>
+
+  <script>
+
+  	
+
+  	document.addEventListener('DOMContentLoaded', () => {
+
+    const grid = document.querySelector('.grid')
+
+    const doodler = document.createElement('div')
+
+    const moveLeftButton = document.getElementById('moveLeftButton')
+
+    const moveRightButton = document.getElementById('moveRightButton')
+
+    const moveStraightButton = document.getElementById('moveStraightButton')
+
+    let doodlerLeftSpace = 0
+
+    let startPoint = 150
+
+    let doodlerBottomSpace = startPoint
+
+    let isGameOver = false
+
+    let platformCount = 5
+
+    let platforms = []
+
+    let upTimerId;
+
+    let downTimerId;
+
+    let isJumping = true
+
+    let isGoingLeft = false
+
+    let isGoingRight = false
+
+    let leftTimerId
+
+    let rightTimerId
+
+    let score = 0
+
+  
+
+    function createDoodler (){
+
+      grid.appendChild(doodler)
+
+      doodler.classList.add('doodler')
+
+      doodlerLeftSpace = platforms[0].left
+
+      doodler.style.left = doodlerLeftSpace + 'px'
+
+      doodler.style.bottom = doodlerBottomSpace + 'px'
+
+  
+
+    }
+
+  
+
+    class Platform{
+
+      constructor(newPlatBottom){
+
+        this.bottom = newPlatBottom
+
+        this.left = Math.random() * 315
+
+        this.visual = document.createElement('div')
+
+  
+
+        const visual = this.visual
+
+        visual.classList.add('platform')
+
+        visual.style.left = this.left + 'px'
+
+        visual.style.bottom = this.bottom + 'px'
+
+        grid.appendChild(visual)
+
+  
+
+      }
+
+    }
+
+  
+
+    function createPlatforms(){
+
+      for (let i = 0; i < platformCount; i++) {
+
+        let platGap = 600 / platformCount
+
+        let newPlatBottom = 100 + i * platGap
+
+        let newPlatform = new Platform(newPlatBottom)
+
+        platforms.push(newPlatform)
+
+        console.log(platforms)
+
+      }
+
+    }
+
+  
+
+    function movePlatforms(){
+
+      if (doodlerBottomSpace > 200) {
+
+        platforms.forEach(platform => {
+
+          platform.bottom -= 4
+
+          let visual = platform.visual
+
+          visual.style.bottom = platform.bottom + 'px'
+
+          
+
+          if (platform.bottom < 10) {
+
+            let firstPlatform = platforms[0].visual
+
+            firstPlatform.classList.remove('platform')
+
+            platforms.shift()
+
+            score++
+
+            console.log(platforms)
+
+            let newPlatform = new Platform(600)
+
+            platforms.push(newPlatform)
+
+          }
+
+        })
+
+      }
+
+    }
+
+  
+
+    function jump(){
+
+      clearInterval(downTimerId)
+
+      isJumping = true
+
+      upTimerId = setInterval(function(){
+
+        doodlerBottomSpace += 20
+
+        doodler.style.bottom = doodlerBottomSpace + 'px'
+
+  
+
+        if (doodlerBottomSpace > startPoint + 200) {
+
+          fall()
+
+        }
+
+      }, 30)
+
+    }
+
+  
+
+    
+
+  
+
+  
+
+    function fall(){
+
+      clearInterval(upTimerId)
+
+      isJumping = false
+
+      downTimerId = setInterval(function(){
+
+        doodlerBottomSpace -= 5
+
+        doodler.style.bottom = doodlerBottomSpace + 'px'
+
+        if (doodlerBottomSpace <= 0) {
+
+          gameOver()
+
+        }
+
+  
+
+        platforms.forEach(platform =>
+
+          {
+
+           if ((doodlerBottomSpace >= platform.bottom) 
+
+          && (doodlerBottomSpace <= (platform.bottom + 15))
+
+          && (doodlerLeftSpace <= (platform.left + 85)) 
+
+          && ((doodlerLeftSpace + 60) >= platform.left) 
+
+          && (!isJumping)) 
+
+          {
+
+            console.log('landed')
+
+            startPoint = doodlerBottomSpace
+
+            jump()
+
+          }
+
+          })
+
+      }, 30)
+
+    }
+
+  
+
+    function gameOver(){
+
+      console.log('Game Over')
+
+      isGameOver = true
+
+      while (grid.firstChild) {
+
+        grid.removeChild(grid.firstChild)
+
+      }
+
+      grid.innerHTML = score
+
+      clearInterval(upTimerId)
+
+      clearInterval(downTimerId)
+
+      clearInterval(leftTimerId)
+
+      clearInterval(rightTimerId)
+
+    }
+
+  
+
+    function controls(){
+
+      moveLeftButton.addEventListener('click', moveLeft)
+
+      moveRightButton.addEventListener('click', moveRight)
+
+      moveStraightButton.addEventListener('click', moveStraight)
+
+    }
+
+  
+
+    function moveLeft(){
+
+      if (isGoingRight) {
+
+        clearInterval(rightTimerId)
+
+        isGoingRight = false      
+
+      }
+
+      isGoingLeft= true
+
+      leftTimerId = setInterval(function(){
+
+        if (doodlerLeftSpace >= 0) {  
+
+         doodlerLeftSpace -= 2
+
+          doodler.style.left = doodlerLeftSpace + 'px' 
+
+        } else moveRight()
+
+      }, 30)
+
+    }
+
+  
+
+    function moveStraight(){
+
+      isGoingLeft = false
+
+      isGoingRight = false
+
+      clearInterval(leftTimerId)
+
+      clearInterval(rightTimerId)
+
+    }
+
+  
+
+    function moveRight(){
+
+      if (isGoingLeft) {
+
+        clearInterval(leftTimerId)
+
+        isGoingLeft = false
+
+      }
+
+      isGoingRight = true
+
+      rightTimerId = setInterval(function(){
+
+        if (doodlerLeftSpace <= 340) {
+
+          doodlerLeftSpace += 2
+
+          doodler.style.left = doodlerLeftSpace + 'px' 
+
+        } else moveLeft()
+
+      }, 30)
+
+    }
+
+  
+
+    function start (){
+
+      if (!isGameOver) {
+
+        createPlatforms()
+
+        createDoodler()
+
+        setInterval(movePlatforms, 30)
+
+        jump()
+
+        document.addEventListener('click',controls)
+
+      } 
+
+    }
+
+    start()
+
+  
+
+  })
+
+  
+
+  	</script>
+
+ 
+
+					
+
+  <script type="text/javascript">
+
+ 
+
+    function refreshPage()
+
+ 
+
+    {
+
+        document.getElementById("load").style.display="none";
+
+        window.location.reload(true);
+
+        
+
+ 
+
+    }</script>
+
+</html>
+
+.
