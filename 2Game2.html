@@ -38,17 +38,7 @@
 
     <button id="moveRightButton">>>></button>
 
-   </br></br>
-
-  <div class="container">
-
- 
-
-<button style="background-color: white; color:black; position:absolute; left:159px; " type="button" id="reloadpage" class="btn btn-success btn-lg" onclick="refreshPage()">Restart</button>
-
- 
-
-</div>
+   
 
   </body>
 
@@ -528,7 +518,57 @@ position: relative;
 
  
 
-					
+</script>
+
+<div id="load" style="display:none; position:fixed; top:0px; right:0px; left:0px; bottom:0px; background-color:#0d0d0d; z-index:1"><img style="position:absolute; top:30px; left:30px; width:80%; " src="https://i.gifer.com/1etH.gif">
+
+    </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br><p3 style="font-size:30px; text-align:center; color:white; position:absolute; left:130px; font-family: 'Lalezar';">Loading ...</p3></div>
+
+<style>
+
+	#load{
+
+				-webkit-animation:cssAnimation 3s forwards;
+
+				animation: cssAnimation 3s forwards;}
+
+				
+
+			@keyframes cssAnimation {
+
+				0%{
+
+					opacity:1;}
+
+					90%{z-index:1;
+
+						opacity:1;
+
+				}
+
+					100%{z-index:-1;
+
+						opacity:0;}
+
+						}
+
+						
+
+						
+
+						</style>
+
+					</br></br>
+
+  <div class="container">
+
+ 
+
+<button style="background-color: white; color:black; position:absolute; left:159px; " type="button" id="reloadpage" class="btn btn-success btn-lg" onclick="refreshPage()">Restart</button>
+
+ 
+
+</div>
 
   <script type="text/javascript">
 
