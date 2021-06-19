@@ -2,7 +2,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
 
-  if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+  if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
 
     document.getElementById("navbar").style.boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
 
