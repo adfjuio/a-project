@@ -23,7 +23,7 @@ if(x.style.top =="0px"){a.src="https://www.linkpicture.com/q/IMG_20210619_070818
 			
 	       }else
 
-{a.src="https://www.linkpicture.com/q/IMG_20210619_075357.jpg";
+{a.src="https://www.linkpicture.com/q/PicsArt_06-19-08.31.30.jpg";
 	a.innerText="Back";
 	z.style.top="0px";
 	
