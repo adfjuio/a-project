@@ -12,7 +12,8 @@ var y=document.getElementById("menu")
 
 	
 	 var x=document.getElementById("click1")
-if(x.style.top =="0px"){a.innerText="Menu";
+if(x.style.top =="0px"){a.src="https://www.linkpicture.com/q/IMG_20210619_070818.jpg";
+	a.innerText="Menu";
 	z.style.top="-50px";
 	
 	y.style.backgroundColor="#303030";
@@ -22,7 +23,8 @@ if(x.style.top =="0px"){a.innerText="Menu";
 			
 	       }else
 
-{a.innerText="Back";
+{a.src="https://www.linkpicture.com/q/IMG_20210619_075357.jpg";
+	a.innerText="Back";
 	z.style.top="0px";
 	
 	y.style.backgroundColor="red";
