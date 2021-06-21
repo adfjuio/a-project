@@ -19,170 +19,28 @@ html{
 
    
 
-#anim1{ -webkit-animation: cssAnimation 5s forwards; 
-
-    animation: cssAnimation 5s forwards;
-
-    animation-iteration-count: infinite;
-
-
-
--webkit-animation-iteration-count: infinite;
-
-}
-
-@keyframes cssAnimation {
-
-    0%   {color:dodgerblue;
-
-            
-
-            
-
-             }
 
     
 
-   10%   {color:blue;
-
             
 
-            
+             
 
-             }
-
-     20%   {color:#00FFFF;
-
-            
-
-            
-
-             }
-
-     30%   {color:#00FF00;
-
-           
-
-            
-
-             }
-
-     40%   {color:yellow;
-
-            
-
-            
-
-             }
-
-    50%{
-
-       color:orange;}
-
-   
-
-   60%{
-
-      color:tomato;}
-
-   70%{color:red;}
-
-   80%{color:purple;}
+     
 
    
 
    
-
-    90%  {color:springgreen;
-
-              
-
-              }
-
-    100% {color:green;
-
-            }
-
-}
-
-
-@-webkit-keyframes cssAnimation {
-
-    
-    0%   {color:dodgerblue;
-
-            
-
-            
-
-             }
 
     
 
-   10%   {color:blue;
-
-            
-
-            
-
-             }
-
-     20%   {color:#00FFFF;
-
-            
-
-            
-
-             }
-
-     30%   {color:#00FF00;
-
-           
-
-            
-
-             }
-
-     40%   {color:yellow;
-
-            
-
-            
-
-             }
-
-    50%{
-
-       color:orange;}
+    
 
    
+             
 
-   60%{
-
-      color:tomato;}
-
-   70%{color:red;}
-
-   80%{color:purple;}
-
-   
-
-   
-
-    90%  {color:springgreen;
-
-              
-
-              }
-
-    100% {color:green;
-
-            }
-
-
-
-}
-
+     
+       
 p1{background-color:#F8F8FF;
    
    font-size:25px;
