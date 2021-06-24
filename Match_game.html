@@ -1,0 +1,579 @@
+<html>
+
+<h1>Match Cards Game!</h1>
+
+  <div id="board">
+
+    <div class="scores">
+
+      <span class="score score__count">0</span>
+
+      <span>Turns</span>
+
+    </div>
+
+    <div class="scores">
+
+      <span class="score score__rights">0</span>
+
+      <span>Matches</span>
+
+    </div>
+
+    <div class="scores">
+
+      <span class="score score__wrongs">0</span>
+
+      <span>Fails</span>
+
+    </div>
+
+  </div>
+
+  <div id="cards"></div>
+
+  <div id="endGame">
+
+    <div class="modal">
+
+      <p class="congrats">
+
+        Yei, you did it!
+
+      </p>
+
+      <p>
+
+        <a id="restart" href="#" class="button">Restart Game</a>
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <a href="index.html"><button style="font-size:28px; position:absolute; top:30px; right:30px; background-color:dodgerblue; color: white; padding:15px 15px; ">Back to home</button></a>
+
+    <div style="position:absolute; top:1830px;  left:0px; right:0px; height:115px; color:red; background-color:skyblue; font-size:25px; text-align:center;"></br>Script, style, positioning, game bot : <span style="color:yellow;">Lovejot brar</span></div>
+
+<div id="load" style="position:fixed; top:0px; right:0px; left:0px; bottom:0px; background-color:#0d0d0d; z-index:1"><img style="position:absolute; top:70px; left:70px; width:80%; " src="https://i.gifer.com/1etH.gif">
+
+    </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br><p3 style="font-size:50px; text-align:center; color:white; position:absolute; left:370px; font-family: 'Lalezar';">Loading ...</p3></div>
+
+				<style>
+
+			#load{
+
+				-webkit-animation:cssAnimation 3s forwards;
+
+				animation: cssAnimation 3s forwards;}
+
+				
+
+			@keyframes cssAnimation {
+
+				0%{
+
+					opacity:1;}
+
+					90%{z-index:1;
+
+						opacity:1;
+
+				}
+
+					100%{z-index:-1;
+
+						opacity:0;}
+
+						}
+
+</style>
+
+  <style>
+
+  	@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+
+*::before,
+
+*::after{
+
+	box-sizing: border-box;
+
+	margin: 0;
+
+	padding: 0;
+
+}
+
+body{
+
+	position: relative;
+
+	font:  16px/1.6 'Poppins', helvetica, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+	margin: 0;
+
+	background: url('data:image/svg+xml,%3Csvg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z" fill="%239C92AC" fill-opacity="0.4" fill-rule="evenodd"/%3E%3C/svg%3E') fixed no-repeat center/cover;
+
+}
+
+body.clip{
+
+	overflow: hidden;
+
+}
+
+h1{
+
+	text-align: center;
+
+	background: linear-gradient(slateblue, cyan);
+
+	font-size: 2.5rem;
+
+	-webkit-background-clip:  text;
+
+	-webkit-text-fill-color:  transparent;
+
+	color:  red;
+
+	margin: 0;
+
+	padding-top: 1rem;
+
+}
+
+.score{
+
+	height: 3rem;
+
+	width: 3rem;
+
+	margin:  0.5rem;
+
+	display: grid;
+
+	place-items: center;
+
+	border-radius: 50%;
+
+	border: 5px solid transparent;
+
+	background: white linear-gradient(135deg, gray 50%, dimgray 50%);
+
+	font-size: 1.5rem;
+
+	color: whitesmoke;
+
+}
+
+.score__count{
+
+	border-color: lightblue;
+
+}
+
+.score__rights{
+
+	border-color: lightgreen;
+
+}
+
+.score__wrongs{
+
+	border-color: salmon;
+
+}
+
+#board{
+
+	display: flex;
+
+	justify-content: center;
+
+	text-align: center;
+
+	margin-bottom: 1rem;
+
+}
+
+#cards{
+
+	display: grid;
+
+	grid-template-columns: repeat(auto-fit, 120px);
+
+	gap: 1rem;
+
+	padding: 0.5rem;
+
+	margin: 0 auto 3rem;
+
+	max-width: 680px;
+
+	perspective: 1000px;
+
+}
+
+.card{
+
+	position: relative;
+
+	width: 120px;
+
+	height: 120px;
+
+	transition: transform 0.25s;
+
+	transform-style: preserve-3d;
+
+	cursor: pointer;
+
+	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.5);
+
+	border-radius: 1rem;
+
+	border:  5px solid slategray;
+
+}
+
+.card.flip{
+
+	transform: rotateY(180deg);
+
+}
+
+.card.match{
+
+	cursor: default;
+
+	border-color: lightgreen;
+
+	user-select: none;
+
+}
+
+.card__front,
+
+.card__back{
+
+	position: absolute;
+
+	inset: 0;
+
+	display: grid;
+
+	place-items: center;
+
+	backface-visibility: hidden;
+
+	border-radius: 1rem;
+
+}
+
+.card__back{
+
+	background: repeating-linear-gradient(135deg, whitesmoke, whitesmoke 5px, deepskyblue 5px, deepskyblue 30px);
+
+}
+
+.card__front{
+
+	background: whitesmoke;
+
+	font-size: 4rem;
+
+	transform: rotateY(180deg);
+
+}
+
+#endGame{
+
+	position: fixed;
+
+	inset: 0;
+
+	display: none;
+
+	place-items: center;
+
+	background: rgba(0, 0, 0, 0.5);
+
+}
+
+#endGame.active{
+
+	display: grid;
+
+}
+
+.modal{
+
+	text-align: center;
+
+	padding:  1rem 4rem;
+
+	min-width: 50%;
+
+	background: whitesmoke;
+
+	border-radius: 0.5rem;
+
+	box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.9);
+
+}
+
+.congrats{
+
+	font-size: 2rem;
+
+	font-weight: bold;
+
+	margin: 1rem 1rem 1.5rem;
+
+	background:  linear-gradient(90deg, red, purple, blue, cyan);
+
+	-webkit-background-clip: text;
+
+	-webkit-text-fill-color: transparent;
+
+}
+
+.button{
+
+	display: inline-block;
+
+	margin: 0 auto;
+
+	padding: 0.5rem 2rem;
+
+	border:  2px solid whitesmoke;
+
+	border-radius: 0.5rem;
+
+	background: white;
+
+	color: dimgray;
+
+	text-decoration: none;
+
+	font-weight: bold;
+
+	box-shadow: 0 0 10px -2px;
+
+}
+
+  	</style>
+
+  <script>
+
+  	'use strict';
+
+const contentCards = ["L","S","B","J","H", "A","R", "M", "I","N", "Q", "D","G","K","V"];
+
+const $cards = document.querySelector('#cards');
+
+const $endLayer = document.querySelector('#endGame');
+
+const $restart = document.querySelector('#restart');
+
+const $score = document.querySelector('.score__count');
+
+const $scoreOk = document.querySelector('.score__rights');
+
+const $scoreWrong = document.querySelector('.score__wrongs');
+
+let firstCard, 
+
+    secondCard, 
+
+    checkCards = false, 
+
+    lockCards = false,
+
+    countMatchs = 0,
+
+    wrongs = 0,
+
+    rights = 0;
+
+$restart.addEventListener('click', e => {
+
+  e.preventDefault();
+
+  startGame();
+
+});    
+
+function endGame(){
+
+  setTimeout(() => {
+
+    $endLayer.classList.add('active');  
+
+  }, 700);
+
+	document.body.classList.add('clip');
+
+}
+
+function checkMatch(){
+
+  if(firstCard.dataset.id === secondCard.dataset.id){
+
+    firstCard.removeEventListener('click', flipCard);
+
+    secondCard.removeEventListener('click', flipCard);
+
+    firstCard.classList.add('match');
+
+    secondCard.classList.add('match');
+
+    [checkCards, lockCards] = [false, false];
+
+    [firstCard, secondCard] = [null, null];
+
+    ++rights;
+
+    ++countMatchs;
+
+    $scoreOk.textContent = countMatchs;
+
+    if(countMatchs === contentCards.length){
+
+      endGame();
+
+    }
+
+  }
+
+  else{
+
+    ++wrongs;
+
+    $scoreWrong.textContent = wrongs;
+
+    setTimeout(() =>{
+
+      firstCard.classList.toggle('flip');
+
+      secondCard.classList.toggle('flip');
+
+      [checkCards, lockCards] = [false, false];
+
+      [firstCard, secondCard] = [null, null];
+
+    }, 1000);
+
+  }
+
+  $score.textContent = rights + wrongs;
+
+}
+
+function flipCard(){
+
+  if(lockCards) return;
+
+  if(firstCard === this) return;
+
+  if(!checkCards){
+
+    firstCard = this;
+
+    this.classList.toggle('flip');
+
+    checkCards = true;
+
+  }
+
+  else{
+
+    secondCard = this;
+
+    this.classList.toggle('flip');
+
+    lockCards = true;
+
+    checkMatch();
+
+  }
+
+}
+
+function shuffleCards(arr){
+
+  for(let i = 0; i < arr.length; ++i){
+
+    arr[i].style.order = Math.floor(Math.random() * arr.length);
+
+  }
+
+}
+
+function fillCards(){
+
+  let allCards = [];
+
+  
+
+  contentCards.forEach((item, index) => {
+
+    const card = document.createElement('DIV');
+
+    const cardBack = document.createElement('DIV');
+
+    const cardFront = document.createElement('DIV');
+
+    card.classList.add('card');
+
+    card.setAttribute('data-id', index);
+
+    cardBack.classList.add('card__back');
+
+    cardFront.classList.add('card__front');
+
+    cardFront.textContent = item; 
+
+    card.appendChild(cardBack);
+
+    card.appendChild(cardFront);
+
+    let cloneCard = card.cloneNode(true);
+
+    allCards.push(card);
+
+    allCards.push(cloneCard);
+
+  });
+
+  allCards.forEach(card => $cards.appendChild(card));
+
+  allCards.forEach(card => card.addEventListener('click', flipCard));
+
+  shuffleCards(allCards);
+
+}
+
+function startGame(){
+
+	document.body.classList.remove('clip');
+
+  $cards.innerHTML = '';
+
+  $endLayer.classList.remove('active');
+
+  $score.textContent = $scoreOk.textContent = $scoreWrong.textContent = 0;
+
+  countMatchs = wrongs = rights = 0;
+
+  fillCards();
+
+}
+
+startGame();
+
+  	</script></html>
