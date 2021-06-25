@@ -120,7 +120,361 @@ border-radius:10px;
 
   </head>
 
-  <body>
+  <body></br></br></br></br></br></br>
+
+  <h style="color:Black; font-size:20px; ">Hot games &#128293;</h></br></br>
+
+   <div class="slideshow-container">
+
+<div class="slideshow-inner">
+
+  <div class="mySlides fade">
+
+  <a href="Race.html">  <img style="width:340px; height:160px;"   src='https://www.linkpicture.com/q/PicsArt_06-24-07.01.53.jpg' style='width: 100%;' /></a>
+
+    
+
+  </div>
+
+  <div class="mySlides fade">
+
+    <a href="gamettt.html"><img style="width:340px; height:160px; "   src='https://www.linkpicture.com/q/PicsArt_06-24-07.40.53.jpg' style='width: 100%;' /></a>
+
+    
+
+  </div>
+
+  <div class="mySlides fade">
+
+<a href="Birdgame.html">    <img  style="width:340px; height:160px;"  src='https://www.linkpicture.com/q/PicsArt_06-24-07.33.44.jpg' style='width: 100%;' /></a>
+
+    
+
+  </div>
+
+  <div class="mySlides fade">
+
+   <a href="Match_game.html"> <img  style="width:340px; height:160px;"  src='https://www.linkpicture.com/q/PicsArt_06-24-07.27.23.jpg' style='width: 100%;' /></a>
+
+  </div>
+
+  
+
+  </div>
+
+  
+
+  
+
+</div>
+
+<div style='text-align: center;'>
+
+  <span class="dot" onclick='currentSlide(1)'></span>
+
+  <span class="dot" onclick='currentSlide(2)'></span>
+
+  <span class="dot" onclick='currentSlide(3)'></span>
+
+  <span class="dot" onclick='currentSlide(4)'></span>
+
+</div>
+
+</div>
+
+<a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+
+  <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+
+</div>
+
+<style>
+
+	
+
+.slideshow-container {
+
+    max-width: 1000px;
+
+    position: relative;
+
+    margin: auto
+
+}
+
+.mySlides {
+
+    display: none;
+
+  height: 160px;
+
+  border: groove 2px red;
+
+     
+
+}
+
+.prev,
+
+.next {
+
+	
+
+    cursor: pointer;
+
+    position: absolute;
+
+    top: 50%;
+
+    width: auto;
+
+    margin-top: -152px;
+
+    padding: 16px;
+
+    
+
+   
+
+    color:orange;
+
+    
+
+    font-weight: bold;
+
+    font-size: 30px;
+
+    transition: .6s ease;
+
+    border-radius: 0 3px 3px 0
+
+   
+
+}
+
+.next {
+
+	
+
+    right: 8px;
+
+    border-radius: 3px 3px 3px 3px
+
+}
+
+.prev {
+
+    left: 8px;
+
+    border-radius: 3px 3px 3px 3px
+
+}
+
+.prev:active,
+
+.next:active {
+
+    color: white;
+
+    background-color:#505050;
+
+   
+
+}
+
+.text {
+
+    color: #f2f2f2;
+
+    font-size: 15px;
+
+    padding-top: 12px;
+
+  padding-bottom: 12px;
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    background-color: #222428
+
+}
+
+.numbertext {
+
+    color: #f2f2f2;
+
+    font-size: 12px;
+
+    padding: 8px 12px;
+
+    position: absolute;
+
+    top: 0
+
+}
+
+.dot {
+
+    cursor: pointer;
+
+    height: 7px;
+
+    width: 7px;
+
+    margin: 0 5px;
+
+    background-color: #bbb;
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+    transition: background-color .6s ease
+
+}
+
+.active,
+
+.dot:hover {
+
+    background-color: blue
+
+}
+
+	</style>
+
+	<script>
+
+		
+
+var slideIndex = 1;
+
+var myTimer;
+
+var slideshowContainer;
+
+window.addEventListener("load",function() {
+
+    showSlides(slideIndex);
+
+    myTimer = setInterval(function(){plusSlides(1)}, 4000);
+
+  
+
+    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+
+    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+  
+
+    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+
+    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+
+  
+
+    slideshowContainer.addEventListener('mouseenter', pause)
+
+    slideshowContainer.addEventListener('mouseleave', resume)
+
+})
+
+// NEXT AND PREVIOUS CONTROL
+
+function plusSlides(n){
+
+  clearInterval(myTimer);
+
+  if (n < 0){
+
+    showSlides(slideIndex -= 1);
+
+  } else {
+
+   showSlides(slideIndex += 1); 
+
+  }
+
+  
+
+  //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+
+  
+
+  if (n === -1){
+
+    myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+
+  } else {
+
+    myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+
+  }
+
+}
+
+//Controls the current slide and resets interval if needed
+
+function currentSlide(n){
+
+  clearInterval(myTimer);
+
+  myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+
+  showSlides(slideIndex = n);
+
+}
+
+function showSlides(n){
+
+  var i;
+
+  var slides = document.getElementsByClassName("mySlides");
+
+  var dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {slideIndex = 1}
+
+  if (n < 1) {slideIndex = slides.length}
+
+  for (i = 0; i < slides.length; i++) {
+
+      slides[i].style.display = "none";
+
+  }
+
+  for (i = 0; i < dots.length; i++) {
+
+      dots[i].className = dots[i].className.replace(" active", "");
+
+  }
+
+  slides[slideIndex-1].style.display = "block";
+
+  dots[slideIndex-1].className += " active";
+
+}
+
+pause = () => {
+
+  clearInterval(myTimer);
+
+}
+
+resume = () =>{
+
+  clearInterval(myTimer);
+
+  myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
+
+}
+
+		</script>
 
    
 
@@ -138,7 +492,7 @@ border-radius:10px;
 
   <img style="width:63px; height:49px;" src="https://www.linkpicture.com/q/IMG_20210619_090021.jpg"></div></a>
 
-</br></br></br></br></br>
+</br></br></br></br><h style="color:red; font-size:30px; background-color:#303030;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp All games &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </h></br>
 
 <div class="row">
 
