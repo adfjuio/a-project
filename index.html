@@ -7,8 +7,8 @@
 <style>
 
 html {
-  background-attachment:fixed;
-  box-sizing: border-box;
+
+	background-color:#F0FFF0;  box-sizing: border-box;
 
 }
 
@@ -32,19 +32,23 @@ html {
 
 .card {
 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  
 
   margin: 8px;
 
 }
 
 .container {
+
 border-radius:10px;
+
   padding: 0 16px;
 
-  height:370px;
+border:3px solid black;
 
-  background-color:white;
+  height:375px;
+
+  background-color:#33FFCC;
 
   
 
@@ -75,6 +79,8 @@ border-radius:10px;
   display: inline-block;
 
   padding: 8px;
+
+border-radius:5px;
 
   color: white;
 
@@ -130,7 +136,7 @@ border-radius:10px;
 
   <div class="mySlides fade">
 
-  <a href="Race.html">  <img style="border-radius:8px; width:343px; height:160px;"   src='https://www.linkpicture.com/q/PicsArt_06-24-07.01.53.jpg' style='width: 100%;' /></a>
+  <a href="Race.html">  <img style="width:343px; border-radius:8px; height:160px; filter: saturate(2.2);"   src='https://www.linkpicture.com/q/PicsArt_06-24-07.01.53.jpg' style='width: 100%;' /></a>
 
     
 
@@ -138,7 +144,7 @@ border-radius:10px;
 
   <div class="mySlides fade">
 
-    <a href="gamettt.html"><img style="border-radius:8px; width:343px; height:160px; "   src='https://www.linkpicture.com/q/PicsArt_06-24-07.40.53.jpg' style='width: 100%;' /></a>
+    <a href="gamettt.html"><img style="width:343px; height:160px; "   src='https://www.linkpicture.com/q/PicsArt_06-24-07.40.53.jpg' style='width: 100%;' /></a>
 
     
 
@@ -146,7 +152,7 @@ border-radius:10px;
 
   <div class="mySlides fade">
 
-<a href="Birdgame.html">    <img  style="border-radius:8px; width:343px; height:160px;"  src='https://www.linkpicture.com/q/PicsArt_06-24-07.33.44.jpg' style='width: 100%;' /></a>
+<a href="Birdgame.html">    <img  style="width:343px; height:160px;"  src='https://www.linkpicture.com/q/PicsArt_06-24-07.33.44.jpg' style='width: 100%;' /></a>
 
     
 
@@ -154,7 +160,7 @@ border-radius:10px;
 
   <div class="mySlides fade">
 
-   <a href="Match_game.html"> <img  style="border-radius:8px; width:343px; height:160px;"  src='https://www.linkpicture.com/q/PicsArt_06-24-07.27.23.jpg' style='width: 100%;' /></a>
+   <a href="Match_game.html"> <img  style="width:343px; height:160px;"  src='https://www.linkpicture.com/q/PicsArt_06-24-07.27.23.jpg' style='width: 100%;' /></a>
 
   </div>
 
@@ -180,7 +186,7 @@ border-radius:10px;
 
 </div>
 
-</div>
+<div style="opacity:0.7; background-color:#202020;" >
 
 <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
 
@@ -198,11 +204,13 @@ border-radius:10px;
 
     position: relative;
 
-    margin: auto
+    margin: auto;
 
 }
 
 .mySlides {
+
+	
 
     display: none;
 
@@ -218,6 +226,8 @@ border-radius:10px;
 
 .next {
 
+    opacity:1;
+
 	
 
     cursor: pointer;
@@ -228,9 +238,9 @@ border-radius:10px;
 
     width: auto;
 
-    margin-top: -152px;
+    margin-top: -33px;
 
-    padding: 16px;
+    padding: 10px;
 
     
 
@@ -270,9 +280,11 @@ border-radius:10px;
 
 }
 
-.prev:active,
+.prev:hover,
 
-.next:active {
+.next:hover {
+
+   opacity:1;
 
     color: white;
 
@@ -328,7 +340,7 @@ border-radius:10px;
 
     margin: 0 5px;
 
-    background-color: white;
+    background-color: pink;
 
     border-radius: 50%;
 
@@ -478,7 +490,7 @@ resume = () =>{
 
    
 
-    <div id="navbar" style="z-index:1; position:fixed; top:0px; left:0px; right:0px; background-color:#303030; height:50px; border-bottom:1px solid red;"> 
+    <div id="navbar" style="z-index:1; position:fixed; top:0px; left:0px; right:0px; background-color:#101010; height:50px; border-bottom:1px solid red;"> 
 
    <a href="About.html"> <div id="click1" onclick="click1()" style="position:fixed; right:0px; top:-50px; transition: top 0.3s; border-left:2px solid #6495ED; border-right:none; color:white; border-top:none; border-bottom:none; background-color:#303030; height:49px; width:60px; ">
 
@@ -492,7 +504,7 @@ resume = () =>{
 
   <img style="width:63px; height:49px;" src="https://www.linkpicture.com/q/IMG_20210619_090021.jpg"></div></a>
 
-</br></br></br></br><h style="color:red; font-size:30px; background-color:#303030;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp All games &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </h></br>
+</br></br></br></br><h style="color:red; font-size:20px; ">&nbsp&nbsp&nbsp&nbsp &#128071;  All games &#127776; &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </h></br></br>
 
 <div class="row">
 
@@ -502,13 +514,13 @@ resume = () =>{
 
       
 
-      <div class="container">
+      <div  class="container">
 
         <h2 style="color:purple;">Guess the number</h2>
 
         <p class="title">Type:fun</p>
 
-        <p style="color:orange";>Fun game, best for time pass .You have to guess the number right and hints will be provided.</p>
+        <p style="color:orange";>Fun game,  guess the number right and hints will be provided.</p>
 
         <p style="color:blue;">Game display:</p>
 
@@ -569,6 +581,7 @@ resume = () =>{
     </div>
 
   </div>
+
 	
 
 <div class="row">
@@ -608,8 +621,8 @@ resume = () =>{
     </div>
 
   </div></br>
-	
 
+	
 
 <div class="row">
 
@@ -625,7 +638,7 @@ resume = () =>{
 
         <p class="title">Type:Hurdle</p>
 
-        <p style="color:orange";>Let's see how many platforms can you jump .Use 3 control buttons to play.</p>
+        <p style="color:orange";>Let's see how many platforms can you jump .Use control buttons.</p>
 
         <p style="color:blue;">Game display:</p>
 
@@ -646,6 +659,7 @@ resume = () =>{
     </div>
 
   </div>
+
 </br>
 
 <div class="row">
@@ -662,7 +676,7 @@ resume = () =>{
 
         <p class="title">Type:Fun</p>
 
-        <p style="color:orange";>Beat the game bot to win the game Tic tac toe. It's a fun game , looks amazing with styling.</p>
+        <p style="color:orange";>Beat the game bot to win the game or play with your friend.</p>
 
         <p style="color:blue;">Game display:</p>
 
@@ -700,7 +714,7 @@ resume = () =>{
 
         <p class="title">Type:Hurdle</p>
 
-        <p style="color:orange";>Make as many scores you can make. Bird is your control by touch , Enjoy. </p>
+        <p style="color:orange";>Make as many scores you can make. Bird is in your control.</p>
 
         <p style="color:blue;">Game display:</p>
 
@@ -740,7 +754,7 @@ resume = () =>{
 
         <p class="title">Type:Mind game</p>
 
-        <p style="color:orange";>Remember the flipped cards and match all pairs of same cards to win.  </p>
+        <p style="color:orange";>Remember the flipped cards and match all pairs of same cards. </p>
 
         <p style="color:blue;">Game display:</p>
 
@@ -752,8 +766,6 @@ resume = () =>{
 
 <img style="border-bottom:2px solid black;" src="https://www.linkpicture.com/q/IMG_20210624_161757.jpg" width="260" height="118">
 
-
-
 </marquee>
 
         <p><a href="Match_game.html" ><button class="button">Play now</button></a></p>
@@ -763,8 +775,6 @@ resume = () =>{
     </div>
 
   </div>
-
-
 
     <script src="external.js">
 
@@ -811,11 +821,13 @@ resume = () =>{
 					
 
 </div>
+
 			
 
 				
+
 				  
 
-
 </body>
+
 </html>
