@@ -2,11 +2,15 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
 
-  if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 
-    document.getElementById("navbar").style.boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+document.getElementById("top").style.display="block"; 
 
-  } else {
+    document.getElementById("navbar").style.boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";}
+
+else {
+
+document.getElementById("top").style.display="none"; 
 
     document.getElementById("navbar").style.boxShadow="none";
 
@@ -18,9 +22,7 @@ function click1(){document.getElementById("click1").style.backgroundColor="dodge
 
 function contact(){document.getElementById("contact").style.backgroundColor="dodgerblue";}
 
-	
-
-	  
+		  
 
 function menu(){var z=document.getElementById("contact")
 
@@ -71,5 +73,23 @@ if(x.style.top =="0px"){a.src="https://www.linkpicture.com/q/IMG_20210619_070818
 	y.style.backgroundColor="red";
 
 		       x.style.top="0px";}}
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
 
 	
