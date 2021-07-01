@@ -487,7 +487,45 @@ resume = () =>{
 }
 
 		</script>
+<div id="top" style="display:none; z-index:2; position:fixed;  bottom:50px; right:40px; background-color:transparent; border:none;   color:red; font-size:50px; transform:rotate(-45deg);  " onclick="scrollToTop(1000);"><span style="text-shadow: 0 0 20px dodgerblue;">&#128481;</span></div>
 
+<script>  
+
+ function scrollToTop (duration) {
+
+    // cancel if already on top
+
+    if (document.scrollingElement.scrollTop === 0) return;
+
+    const cosParameter = document.scrollingElement.scrollTop / 2;
+
+    let scrollCount = 0, oldTimestamp = null;
+
+    function step (newTimestamp) {
+
+        if (oldTimestamp !== null) {
+
+            // if duration is 0 scrollCount will be Infinity
+
+            scrollCount += Math.PI * (newTimestamp - oldTimestamp) / duration;
+
+            if (scrollCount >= Math.PI) return document.scrollingElement.scrollTop = 0;
+
+            document.scrollingElement.scrollTop = cosParameter + cosParameter * Math.cos(scrollCount);
+
+        }
+
+        oldTimestamp = newTimestamp;
+
+        window.requestAnimationFrame(step);
+
+    }
+
+    window.requestAnimationFrame(step);
+
+}
+
+  </script>
    
 
     <div id="navbar" style="z-index:1; position:fixed; top:0px; left:0px; right:0px; background-color:#101010; height:50px; border-bottom:1px solid red;"> 
