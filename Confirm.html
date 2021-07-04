@@ -1,280 +1,527 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
   <head>
+
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <link rel="stylesheet" href="form.css" />
+
     <title>Save Later</title>
+
   </head>
+
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <body><a href="index.html"><button style="background-color:transparent; font-size:25px; border:1px solid grey; position:relative; left:280px; top:80px; z-index:3;" class="fa fa-home" onclick="canc()" id="home"></button></a>
-    <div class="alert"></div><div id="back">
+
+  <body><div id="back"><a href="index.html"><button style="background-color:transparent; font-size:25px; border:1px solid grey; position:absolute;  right:10px; top:10px; z-index:3;" class="fa fa-home" onclick="canc()" id="home"></button></a>
+
+    <div class="alert"></div>
+
     <form id="save-later-form">
+
     	
-      <h3>Fill registered email Id to play.</h3>
+
+      <h3 style="color:tomato;">Fill registered email Id to play.</h3>
+
       <label for="email">Email</label>
+
       <input type="email" name="email" id="email" ></input></br></br>
+
       
-      <button type="submit" id="save">SAVE</button></br></br>
- <p style="font-size:13px">  If not registered yet,<a href="https://adfjuio.github.io/games/Register.html"> click here</a> </form></p>
-   <button id="btn" onclick="btn001()">PLAY</button> </div>
-    <p style="position:fixed; top:400px; left:36px;" id="nott"></p>
+
+      </form>
+
+ 
+
+   <button id="btn" onclick="btn001()">PLAY</button>
+
+<button type="submit" id="save">SAVE</button> 
+
+</br></br><p style="font-size:13px">  If not registered yet,<a href="https://adfjuio.github.io/games/Register.html"> click here</a> </p>
+
+<p style="" id="nott"></p></div>
+
+    
+
   </body>
+
   <script src="form.js"></script>
+
 <script>
+
 	
+
 	function btn001() {
+
 		var x=document.getElementById("nott")
+
 var text001;
+
 var colors001 = email.value;
+
 if (colors001=="lovejot044@gmail.com"){
+
                 document.location.href = "Neon_tiles.html";
+
             }
+
 else if (colors001=="xeteti3044@herrain.com"){
+
                 document.location.href = "Neon_tiles.html";
+
             }
+
             else if (colors001=="itsjohn67@yahoo.in"){
+
                 document.location.href = "Neon_tiles.html";
+
             }
+
 else if (colors001=="me45brar@gmail.com"){
+
                 document.location.href = "Neon_tiles.html";
+
             }
+
 else if (colors001=="singhbisman612@gmail.com"){
+
                 document.location.href = "Neon_tiles.html";
+
             }
+
 else if (colors001=="jassisharma942@gmail.com"){
+
                 document.location.href = "Neon_tiles.html";
+
             }
+
 else if (colors001=="mehakgarg168@gmail.com"){
+
                 document.location.href = "Neon_tiles.html";
+
             }
+
 else{
+
 	x.style.animation = 'none';
+
 			
+
             x.offsetHeight; 
+
             x.style.animation = null; 
+
 	x.innerText="The email is either not registered or if registered then is not approved by the developer. Message developer for early approval.";
+
 }
+
 }
+
 	</script>
+
 <style>
+
 	@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 *,
+
 *:before,
+
 *:after {
+
   box-sizing: border-box;
+
 }
 
 body {
+
   background-color: whitesmoke;
+
   font-family: "Nunito", sans-serif;
+
 }
 
 h3,
+
 label {
+
   text-transform: uppercase;
-}
-#nott{
-	width: 80vw;
-  margin: 2rem auto;
-  background-color: #d4edda;
-  color: #155724;
-  padding: 0.75rem 1.25rem;
-  border-radius: 0.25rem;
-    animation: cssAnimation 3s forwards;
-    }
-  
-  @keyframes cssAnimation {
-    0%   {opacity: 1;
-            transform:translateY(-30%);
-            
-             }
-     20%{
-     	opacity:1;
-         transform:translateY(0%);}
-    90%  {opacity: 1;
-              
-              }
-    100% {opacity: 0;}
-}
-.alert{
-	position:absolute;
-	top:0px; 
-	left:36px;
-  width: 80vw;
-  margin: 2rem auto;
-  background-color: #d4edda;
-  color: #155724;
-  padding: 0.75rem 1.25rem;
-  border-radius: 0.25rem;
-  display: none;
+
 }
 
-#save-later-form {
+#nott{
+
+	width:100%;
+
+	text-align:center;
+
+  margin: 2rem auto;
+
+  background-color: #d4edda;
+
+  color: #155724;
+
+  padding: 0.75rem 1.25rem;
+
+  border-radius: 0.25rem;
+
+    animation: cssAnimation 3s forwards;
+
+    }
+
+  
+
+  @keyframes cssAnimation {
+
+    0%   {opacity: 1;
+
+            transform:translateY(30%);
+
+            
+
+             }
+
+     20%{
+
+     	opacity:1;
+
+         transform:translateY(0%);}
+
+    90%  {opacity: 1;
+
+              
+
+              }
+
+    100% {opacity:0; 
+
+               }
+
+}
+
+.alert{
+
 	
+
+	text-align:center;
+
+	z-index:3;
+
+  width: 100%;
+
+  margin: 2rem auto;
+
+  background-color: #d4edda;
+
+  color: #155724;
+
+  padding: 0.75rem 1.25rem;
+
+  border-radius: 0.25rem;
+
+  display: none;
+
+}
+
+#back{
+
+	
+
   position: relative;
+
   width: 80vw;
+
   margin: 3rem auto;
+
   background-color: white;
+
   padding: 1rem 2rem;
+
   border-radius: 3px;
+
 }
 
 label {
+
   margin: 1rem 0 0;
+
   display: block;
+
 }
 
 input {
+
   font-size: 0.875em;
+
   width: 100%;
+
   height: 40px;
+
   padding: 0px 15px 0px 15px;
+
   background: whitesmoke;
+
   outline: none;
+
   color: #000;
+
   border: none;
+
   border-radius: 3px;
+
 }
 
 input:hover {
+
   background: whitesmoke;
+
   color: black;
+
 }
 
 button[type="submit"] {
+
   background-color: #349bab;
+
   width: calc((100% / 2) - 3px);
+
   display: inline-block;
+
   color: white;
+
   font-weight: 600;
+
   height: 2.8rem;
+
   border: none;
+
   font-family: Nunito;
+
   font-size: 1rem;
+
   cursor: pointer;
+
   outline: none;
+
 }
+
 #btn{
-	position:absolute;
-	top:271.5px; 
-	left:190px; 
+
+	
+
 background-color: #349bab;
-  width: calc((100% / 2) - 73px);
+
+width: calc((100% / 2) - 3px);
+
   display: inline-block;
+
   color: white;
+
   font-weight: 600;
+
   height: 2.8rem;
+
   border: none;
+
   font-family: Nunito;
+
   font-size: 1rem;
+
   cursor: pointer;
+
   outline: none;
+
 }
+
 #home:active{
+
 	background-image:linear-gradient(lightblue,pink);}
+
 #save {
+
   background-color: #30383f;
+
 }
 
 select {
+
   width: 100%;
+
   height: 40px;
+
   background: whitesmoke;
+
   border: none;
+
   padding: 0 0 0 0.5rem;
+
   outline: none;
+
 }
 
 select:focus,
+
 input:focus,
+
 textarea:focus {
+
   outline: #349bab solid 1px;
+
 }
 
 textarea {
+
   width: 100%;
+
   max-width: 100%;
+
   height: 110px;
+
   max-height: 110px;
+
   padding: 15px;
+
   margin: 0 0 1rem 0;
+
   background: whitesmoke;
+
   outline: none;
+
   color: black;
+
   font-size: 0.875em;
+
   border: none;
+
 }
+
 /* ========MEDIA QUERIES======== */
+
 @media screen and (min-width: 768px) {
+
   #save-later-form,
+
   .alert {
+
     width: 60vw;
+
   }
+
 }
 
 @media screen and (min-width: 992px) {
+
   #save-later-form,
+
   .alert {
+
     width: 40vw;
+
   }
+
 }
+
 	</style>
+
+	
+
 <script>
+
 	// form.js
+
 const formId = "save-later-form"; // ID of the form
+
 const url = location.href; //  href for the page
+
 const formIdentifier = `${url} ${formId}`; // Identifier used to identify the form 
+
 const saveButton = document.querySelector("#save"); // select save button
+
 const alertBox = document.querySelector(".alert"); // select alert display div
+
 let form = document.querySelector(`#${formId}`); // select form
+
 let formElements = form.elements; // get the elements in the form
 
-
 const getFormData = () => {
+
   let data = { [formIdentifier]: {} };
+
   for (const element of formElements) {
+
     if (element.name.length > 0) {
+
       data[formIdentifier][element.name] = element.value;
+
     }
+
   }
+
   return data;
+
 };
 
 saveButton.onclick = event => {
-  event.preventDefault();
-  data = getFormData();
-  localStorage.setItem(formIdentifier, JSON.stringify(data[formIdentifier]));
-  const message = "Your Id  has been saved for future!";
-  displayAlert(message);
-};
 
+  event.preventDefault();
+
+  data = getFormData();
+
+  localStorage.setItem(formIdentifier, JSON.stringify(data[formIdentifier]));
+
+  const message = "Your Id  has been saved for future!";
+
+  displayAlert(message);
+
+};
 
 const displayAlert = message => {
+
   alertBox.innerText = message;
+
   alertBox.style.display = "block";
+
   setTimeout(function() {
+
     alertBox.style.display = "none";
+
   }, 1000);
+
 };
 
-
 const populateForm = () => {
+
   if (localStorage.key(formIdentifier)) {
+
     const savedData = JSON.parse(localStorage.getItem(formIdentifier)); // get and parse the saved data from localStorage
+
     for (const element of formElements) {
+
       if (element.name in savedData) {
+
         element.value = savedData[element.name];
+
       }
+
     }
+
     const message = "Your saved Id filled!";
+
     displayAlert(message);
+
   }
+
 };
 
 document.onload = populateForm();
+
 	</script>
+
 	</html>
