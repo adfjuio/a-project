@@ -560,7 +560,7 @@ e7.scrollIntoView({behavior: "smooth",block: "center"});
 
 else if(colors001==""){
 
-	alert("Atleast fill something, how there can be a result if you have filled nothing");}
+	 }
 
 else{
 
